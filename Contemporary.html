@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contemporary Period</title>
+    <!-- Link to Google Fonts for contemporary period-themed font (Roboto Slab) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto Slab', serif;
+            background: url('images/conB.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(50, 50, 50, 0.7);
+            z-index: -1;
+        }
+
+              h1 {
+            margin: 20px 0;
+            font-size: 64px;
+            background: linear-gradient(to right, #89CFF0, #B0E0E6); /* Light blue gradient */
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 
+                0 0 10px rgba(173, 216, 230, 0.6),
+                0 0 15px rgba(176, 224, 230, 0.8); /* Soft light blue shadows */
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+
+        .subtopics-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            margin-top: 120px;
+            flex-wrap: wrap;
+        }
+
+        .subtopic-button {
+            position: relative;
+            width: 300px;
+            height: 500px; /* Increased height */
+            background: linear-gradient(180deg, rgba(0, 31, 63, 0.8), rgba(11, 61, 145, 0.8));
+            border: 2px solid #001f3f;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 20px;
+            text-transform: uppercase;
+            text-shadow: 0 0 8px rgba(0, 31, 63, 0.8), 0 0 12px rgba(11, 61, 145, 0.8);
+        }
+
+        .subtopic-button:hover {
+            transform: scale(1.05);
+            box-shadow: 
+                0 0 15px rgba(0, 31, 63, 0.6),
+                0 0 20px rgba(11, 61, 145, 0.7);
+            background: linear-gradient(180deg, rgba(0, 31, 63, 1), rgba(11, 61, 145, 1)); /* Darker background on hover */
+        }
+
+        .subtopic-button:active {
+            transform: scale(1.1);
+            box-shadow: 
+                0 0 20px rgba(0, 31, 63, 0.8),
+                0 0 30px rgba(11, 61, 145, 0.9);
+        }
+
+        .subtopic-button img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.85;
+            z-index: -1;
+        }
+
+        .subtopic-button:hover img {
+            opacity: 1;
+        }
+
+        .subtopic-button span {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 8px 0;
+            background-color: rgba(0, 0, 0, 0.7); /* Darker background for text */
+            color: #ffffff; /* Elegant text color */
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-shadow: 0 0 5px rgba(0, 31, 63, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <h1>Contemporary Period</h1>
+    <div class="subtopics-container">
+        <a href="C:\Users\senir\Desktop\web assin\8.Contemporary Period\contemporary\contemporary\key features\web practice.html" class="subtopic-button">
+            <img src="images/cona.jpg" alt="Key Features of the Contemporary Period">
+            <span>Key Features of the Contemporary Period</span>
+        </a>
+        <a href="C:\Users\senir\Desktop\web assin\8.Contemporary Period\contemporary\contemporary\major events\major events.html" class="subtopic-button">
+            <img src="images/conb1.jpg" alt="Major Global Events and Movements">
+            <span>Major Global Events and Movements</span>
+        </a>
+        <a href="C:\Users\senir\Desktop\web assin\8.Contemporary Period\contemporary\contemporary\poltical\economical and political shift.html" class="subtopic-button">
+            <img src="images/conc.jpg" alt="Economic and Political Shifts">
+            <span>Economic and Political Shifts</span>
+        </a>
+        <a href="C:\Users\senir\Desktop\web assin\8.Contemporary Period\contemporary\contemporary\cultural\cultural trend.html" class="subtopic-button">
+            <img src="images/cond.jpg" alt="Cultural Changes and Innovations">
+            <span>Cultural Changes and Innovations</span>
+        </a>
+    </div>
+</body>
+</html>

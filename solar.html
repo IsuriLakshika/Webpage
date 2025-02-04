@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Our Cosmic Neighborhood Came to Be</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        body {
+            background-color: #000; /* Black background */
+            color: #fff;
+            overflow-x: hidden;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        /* Star Background Effect */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png');
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+        /* Title Styling */
+        h1 {
+            text-align: center;
+            font-size: 2.2em; /* Reduced size */
+            margin-top: 20px;
+            color: #fff;
+            text-shadow: 0 0 10px #9b59ff, 0 0 20px #b85cff; /* Neon glow effect */
+        }
+
+        /* Paragraph Styling */
+        .content {
+            width: 100%; /* Allow full width */
+            max-width: 1200px; /* Maximum width */
+            margin: 20px auto;
+            padding: 20px;
+            font-size: 1.1em;
+            line-height: 1.8;
+            text-align: left; /* Align left */
+            border: 2px solid #9b59ff;
+            border-radius: 10px;
+            background-color: rgba(17, 17, 17, 0.9); /* Slightly lighter black */
+            box-shadow: 0 0 15px rgba(155, 89, 255, 0.8);
+        }
+
+        .content ul {
+            margin-top: 15px;
+            margin-left: 40px;
+        }
+
+        .content li {
+            margin: 8px 0;
+        }
+
+        .content strong {
+            color: #9b59ff; /* Highlight key points */
+        }
+
+        /* Card Container */
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px auto;
+            gap: 20px; /* Space between cards */
+            flex-wrap: nowrap; /* All cards in one row */
+        }
+
+        /* Card Styling */
+        .card {
+            position: relative;
+            width: 250px;
+            height: 150px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(155, 89, 255, 0.8);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            background-color: #111; /* Default background */
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(155, 89, 255, 1), 0 0 50px rgba(155, 89, 255, 0.8);
+        }
+
+        /* Placeholder Image */
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Card Overlay Text */
+        .card .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: #9b59ff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.9em; /* Reduced size */
+            text-transform: uppercase;
+        }
+    </style>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Title -->
+    <h1>How Our Cosmic Neighborhood Came to Be</h1>
+
+    <!-- Content Section -->
+    <div class="content">
+        <p>
+            The Solar System, our cosmic home, was born about 4.6 billion years ago from the collapse of a massive molecular cloud of gas and dust. Through a fascinating process driven by gravity and cosmic forces, the Sun, planets, moons, asteroids, and comets came into existence.
+        </p>
+        <p>
+            This celestial birth provided the conditions for life to emerge billions of years later on Earth.
+        </p>
+        <ul>
+            <li><strong>Age:</strong> ~4.6 billion years</li>
+            <li><strong>Central Object:</strong> The Sun</li>
+            <li><strong>Planetary Count:</strong> 8 planets + dwarf planets</li>
+            <li><strong>Formation Process:</strong> Gravitational collapse of a solar nebula</li>
+        </ul>
+    </div>
+
+   <!-- Cards Container -->
+<div class="card-container">
+    <!-- Card 1 -->
+    <a href="C:\Users\senir\Desktop\web assin\1.Cosmic Gensis\solar system\solar system\1st button\stages of solar system.html">
+        <div class="card">
+            <img src="images/scoa.jpg" alt="Image Placeholder A">
+            <div class="overlay">From Cosmic Dust to Planetary Wonders</div>
+        </div>
+    </a>
+    <!-- Card 2 -->
+    <a href="C:\Users\senir\Desktop\web assin\1.Cosmic Gensis\solar system\solar system\2nd button\structure of the solar systrm.html">
+        <div class="card">
+            <img src="images/scob.jpg" alt="Image Placeholder B">
+            <div class="overlay">The Cosmic Architecture of Our Solar System</div>
+        </div>
+    </a>
+    <!-- Card 3 -->
+    <a href="C:\Users\senir\Desktop\web assin\1.Cosmic Gensis\solar system\solar system\3rd button\key events.html">
+        <div class="card">
+            <img src="images/scoc.jpg" alt="Image Placeholder C">
+            <div class="overlay">Milestones in the Birth of Our Solar System</div>
+        </div>
+    </a>
+    <!-- Card 4 -->
+    <a href="C:\Users\senir\Desktop\cosmic beginnings pages\cosmic beginnings pages\solar system\4th button\2nd .html">
+        <div class="card">
+            <img src="images/scod.jpg" alt="Image Placeholder D">
+            <div class="overlay">Interesting Facts About the Solar System</div>
+        </div>
+    </a>
+</div>
+</body>
+</html>

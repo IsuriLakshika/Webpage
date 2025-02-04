@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Predictions</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap'); /* Futuristic font for the topic and button */
+
+        body {
+            font-family: Arial, sans-serif; /* Default font for the body text */
+            background-color: #000;
+            color: #0ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            background-image: url('background.jpg'); /* Add your background image name here */
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        h1 {
+            font-family: 'Orbitron', sans-serif; /* Futuristic font for topic */
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #0ff;
+            text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        .prediction-card {
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid #0ff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .prediction-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+        }
+        .prediction-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .prediction-card .text {
+            padding: 15px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .prediction-card .text span {
+            font-weight: bold;
+            color: #0ff;
+        }
+        .prediction-card .text .author {
+            font-size: 14px;
+            color: #aaa;
+            margin-top: 10px;
+        }
+        .predict-button {
+            display: inline-block;
+            margin: 20px 0;
+            background-color: #0ff;
+            color: #000;
+            padding: 10px 20px;
+            font-family: 'Orbitron', sans-serif; /* Futuristic font for button */
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            text-align: center;
+        }
+        .predict-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Famous Future Predictions</h1>
+    <div class="grid" id="predictionsGrid">
+        <!-- Cards will be dynamically inserted here -->
+    </div>
+
+
+
+
+    <script>
+        // Array of famous predictions with images and text
+        const predictions = [
+            { image: "images/1.jpg", text: "Artificial Intelligence will surpass human intelligence by 2050.", author: "Ray Kurzweil" },
+            { image: "images/2.jpg", text: "Humans will colonize Mars by 2040.", author: "Elon Musk" },
+            { image: "images/3.jpg", text: "Global temperatures will rise by 2°C by 2100.", author: "Intergovernmental Panel on Climate Change (IPCC)" },
+            { image: "images/4.jpg", text: "Quantum computers will revolutionize industries by 2035.", author: "IBM Research Team" },
+            { image: "images/5.jpg", text: "Fusion energy will become a reality by 2060.", author: "International Thermonuclear Experimental Reactor (ITER)" },
+            { image: "images/6.jpg", text: "Humans will achieve immortality by 2100.", author: "Aubrey de Grey" },
+            { image: "images/7.jpg", text: "Self-driving cars will dominate roads by 2030.", author: "Chris Urmson" },
+            { image: "images/8.jpg", text: "The first space hotel will open by 2045.", author: "Orion Span" },
+            { image: "images/9.jpg", text: "Climate engineering will prevent disasters by 2070.", author: "David Keith" },
+            { image: "images/10.jpg", text: "The first human clone will be born by 2080.", author: "Richard Seed" },
+            { image: "images/11.jpg", text: "The Arctic will be ice-free in summers by 2050.", author: "National Snow and Ice Data Center (NSIDC)" },
+            { image: "images/12.jpg", text: "3D-printed organs will save lives by 2035.", author: "Anthony Atala" },
+            { image: "images/13.jpg", text: "Interstellar travel will begin by 2100.", author: "Michio Kaku" },
+            { image: "images/14.jpg", text: "Smart cities powered by AI will rise by 2040.", author: "Masdar City Planners" },
+            { image: "images/15.jpg", text: "Global population will peak at 10 billion by 2070.", author: "United Nations Population Division" },
+            { image: "images/16.jpg", text: "Antibiotic resistance will be solved by 2055.", author: "World Health Organization (WHO)" },
+            { image: "images/17.jpg", text: "Underwater cities will emerge by 2080.", author: "Jacque Fresco" },
+            { image: "images/18.jpg", text: "AI will create art indistinguishable from humans by 2035.", author: "OpenAI Research Team" },
+            { image: "images/19.jpg", text: "Personal flying vehicles will be common by 2045.", author: "Larry Page" },
+            { image: "images/20.jpg", text: "Renewable energy will power 90% of the world by 2070.", author: "International Energy Agency (IEA)" }
+        ];
+
+        const predictionsGrid = document.getElementById("predictionsGrid");
+
+        // Function to create a prediction card
+        const createCard = (prediction) => {
+            const card = document.createElement("div");
+            card.className = "prediction-card";
+            card.innerHTML = `
+                <img src="${prediction.image}" alt="Prediction Image">
+                <div class="text">
+                    ${prediction.text}
+                    <div class="author">By: ${prediction.author}</div>
+                </div>
+            `;
+            return card;
+        };
+
+        // Append predictions to the grid
+        predictions.forEach(prediction => {
+            predictionsGrid.appendChild(createCard(prediction));
+        });
+    </script>
+</body>
+</html>

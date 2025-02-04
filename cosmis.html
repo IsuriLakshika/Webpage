@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Genesis</title>
+    <!-- Link to Google Fonts for cosmic-themed font (Audiowide) -->
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Audiowide', sans-serif; /* Use Audiowide font */
+            background: url('images/cosmicB.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative; /* Set relative positioning to overlay dark layer */
+        }
+
+        /* Dark overlay */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+            z-index: -1; /* Place the overlay behind content */
+        }
+
+        h1 {
+            margin: 20px 0;
+            font-size: 64px;
+            text-align: center;
+            color: white;
+            text-shadow: 0 0 20px rgba(148, 0, 211, 0.9), 0 0 30px rgba(255, 20, 147, 0.8), 0 0 40px rgba(0, 255, 255, 0.7), 0 0 60px rgba(0, 128, 255, 0.7);
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .subtopics-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            max-width: 1200px;
+            padding: 20px;
+            margin-top: 100px;
+            flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+        }
+
+        .subtopic-button {
+            position: relative;
+            width: 300px;
+            height: 500px; /* Increased vertical size for portrait */
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(25, 25, 112, 0.9) 100%); /* Darker gradient */
+            border: 2px solid rgba(148, 0, 211, 0.8);
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-transform: uppercase;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+            text-decoration: none; /* Removed underline */
+        }
+
+        .subtopic-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(148, 0, 211, 0.8), 0 0 45px rgba(255, 20, 147, 0.7), 0 0 60px rgba(0, 255, 255, 0.7), 0 0 70px rgba(0, 128, 255, 0.6);
+        }
+
+        .subtopic-button img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.85;
+        }
+
+        .subtopic-button:hover img {
+            opacity: 1;
+        }
+
+        .subtopic-button span {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 8px 0; /* Make the black box a line */
+            background-color: rgba(0, 0, 0, 0.7); /* Dark background for text */
+            text-align: center;
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cosmic Genesis</h1>
+    <div class="subtopics-container">
+        <a href="C:\Users\senir\Desktop\web assin\1.Cosmic Gensis\big bang\big bang.html" class="subtopic-button">
+            <img src="images/cosmica.jpg" alt="Big Bang">
+            <span>The Big Bang</span>
+        </a>
+        <a href="C:\Users\senir\Desktop\web assin\1.Cosmic Gensis\milky way\milky way.html" class="subtopic-button">
+            <img src="images/cosmicBB.jpg" alt="Celestial Birth">
+            <span>Celestial Birth</span>
+        </a>
+        <a href="C:\Users\senir\Desktop\web assin\1.Cosmic Gensis\solar system\solar system.html" class="subtopic-button">
+            <img src="images/cosmicc.jpg" alt="Galaxy Creation">
+            <span>Galaxy Creation</span>
+        </a>
+    </div>
+</body>
+</html>
